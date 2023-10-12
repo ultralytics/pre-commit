@@ -2,8 +2,8 @@
 # Pre-commit hooks. For more information see https://github.com/pre-commit/pre-commit-hooks/blob/main/README.md
 
 - id: capitalize-comments
-  name: 'Capitalize standalone inline comments'
-  entry: hooks/capitalize_comments.py
+  name: Capitalize standalone inline comments
+  description: This hook capitalizes the first letter in standalone inline comments.
+  entry: ./hooks/capitalize_comments.py
   language: python
-  language_version: python3  # Ensure Python 3 is specified
   types: [python]

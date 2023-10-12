@@ -1,6 +1,6 @@
 # Ultralytics Pre-commit Hooks
 
-This repository contains pre-commit hooks developed by [Ultralytics](https://ultralytics.com) for ensuring code quality and standards. 
+This repository contains pre-commit hooks developed by [Ultralytics](https://ultralytics.com) for ensuring code quality and standards.
 
 ## Repository Structure
 
@@ -26,6 +26,7 @@ Each hook that's available for installation needs to be defined in the `.pre-com
 ```
 
 Where:
+
 - `hook-id` is a unique identifier for the hook.
 - `Descriptive Hook Name` is a short name that describes what the hook does.
 - `hook_script.py` is the script in the `hooks` directory that implements the hook.
@@ -35,11 +36,8 @@ Where:
 To add a new hook:
 
 1. **Create the Hook Script**: Write a Python script that implements your hook and place it in the `hooks` directory. Ensure the script has the necessary error handling and provides meaningful output messages.
-
 2. **Define the Hook**: Add a new entry for your hook in the `.pre-commit-hooks.yaml` file, following the structure mentioned above.
-
 3. **Test the Hook**: It's important to test the new hook locally in a project to ensure it behaves as expected.
-
 4. **Commit and Push**: Once you've tested the hook, commit your changes to this repository and push.
 
 ## Installing Hooks in Your Project
@@ -47,10 +45,10 @@ To add a new hook:
 In your main project's `.pre-commit-config.yaml`, you can reference the remote hook repository:
 
 ```yaml
--   repo: https://github.com/ultralytics/pre-commit
-    rev: master  # or a specific git tag/revision
-    hooks:
-    -   id: hook-id
+- repo: https://github.com/ultralytics/pre-commit
+  rev: main  # or a specific git tag/revision
+  hooks:
+    - id: hook-id
 ```
 
 Then, run the following command in your project directory:

@@ -1,0 +1,28 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ultralytics-pre-commit-hooks"
+version = "0.0.0"
+description = "Pre-commit hooks developed by Ultralytics for ensuring code quality and standards."
+authors = [{ "name" = "Ultralytics", "email" = "hello@ultralytics.com" }]
+license = { "text" = "AGPL-3.0" }
+readme = "README.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Utilities",
+]
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"

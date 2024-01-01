@@ -19,12 +19,12 @@ def capitalize_comment_line(line: str, prev_was_comment: bool) -> str:
     if prev_was_comment:
         return line
 
-    return re.sub(r'^(\s*)# (\w)', lambda m: f'{m.group(1)}# {m.group(2).upper()}', line)
+    return re.sub(r"^(\s*)# (\w)", lambda m: f"{m.group(1)}# {m.group(2).upper()}", line)
 
 
 def process_file(file_path: Path):
     """Processes a file and capitalizes the first letter of standalone inline comments."""
-    with file_path.open('r') as f:
+    with file_path.open("r") as f:
         lines = f.readlines()
 
     prev_was_comment = False
@@ -39,7 +39,7 @@ def process_file(file_path: Path):
             processed_lines.append(line)
             prev_was_comment = False
 
-    with file_path.open('w') as f:
+    with file_path.open("w") as f:
         f.writelines(processed_lines)
 
 

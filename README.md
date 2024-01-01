@@ -31,9 +31,10 @@ Hooks available for installation are declared within the `.pre-commit-hooks.yaml
 ```
 
 Where the elements are as follows:
-+ `hook-id` represents a unique identifier for the hook you are configuring.
-+ `A Name Describing What the Hook Does`: A brief, intuitive name that indicates the functionality of the hook.
-+ `name_of_your_hook_script.py` is the filename for the Python script that resides in the `hooks` directory and codifies the logic for the hook.
+
+- `hook-id` represents a unique identifier for the hook you are configuring.
+- `A Name Describing What the Hook Does`: A brief, intuitive name that indicates the functionality of the hook.
+- `name_of_your_hook_script.py` is the filename for the Python script that resides in the `hooks` directory and codifies the logic for the hook.
 
 ## ➕ Adding Additional Hooks
 
@@ -60,6 +61,7 @@ Execute this command within your project's directory to set up the pre-commit fr
 ```bash
 pre-commit install
 ```
+
 With this action, the identified pre-commit hooks from Ultralytics will now be a part of your workflow, automatically running during the commit phase.
 
 ## 💡 Contribute

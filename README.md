@@ -5,6 +5,8 @@
 
 This repository contains pre-commit hooks developed by [Ultralytics](https://ultralytics.com) for ensuring code quality and standards in our software development practices. By leveraging these hooks, developers can automate the process of code validation, thus maintaining a high level of code hygiene.
 
+[![Ultralytics Actions](https://github.com/ultralytics/pre-commit/actions/workflows/format.yml/badge.svg)](https://github.com/ultralytics/pre-commit/actions/workflows/format.yml)
+
 ## 🗂 Repository Structure
 
 The repository is thoughtfully structured to facilitate easy navigation and understanding:

@@ -26,7 +26,7 @@ Hooks available for installation are declared within the `.pre-commit-hooks.yaml
 
 ```yaml
 - id: hook-id
-  name: 'A Name Describing What the Hook Does'
+  name: "A Name Describing What the Hook Does"
   entry: hooks/name_of_your_hook_script.py
   language: python
   types: [python]
@@ -53,7 +53,7 @@ To harness the power of Ultralytics pre-commit hooks within your project, add th
 
 ```yaml
 - repo: https://github.com/ultralytics/pre-commit-hooks
-  rev: main  # You might prefer pinning this to a specific git tag or commit SHA.
+  rev: main # You might prefer pinning this to a specific git tag or commit SHA.
   hooks:
     - id: hook-id
 ```

@@ -1,3 +1,5 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
 #!/usr/bin/env python3
 
 # Ultralytics YOLO 🚀, AGPL-3.0 license

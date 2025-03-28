@@ -13,14 +13,14 @@ Welcome to the Ultralytics pre-commit hooks repository! This collection features
 
 This repository is organized for clarity and ease of use:
 
--   **`hooks/` directory:** Contains individual [Python](https://www.python.org/) scripts, each representing a distinct pre-commit hook designed for specific checks or code formatting tasks.
--   **`.pre-commit-hooks.yaml`:** The root configuration file defining the available hooks, making them discoverable and easy to integrate into your projects.
+- **`hooks/` directory:** Contains individual [Python](https://www.python.org/) scripts, each representing a distinct pre-commit hook designed for specific checks or code formatting tasks.
+- **`.pre-commit-hooks.yaml`:** The root configuration file defining the available hooks, making them discoverable and easy to integrate into your projects.
 
 ### Hook Scripts in `hooks` Directory 📂
 
 Each script within the `hooks` directory is a standalone Python program performing a specific pre-commit task. For instance:
 
--   `capitalize_comments.py`: Ensures that standalone inline comments start with a capital letter, promoting readability and a professional coding style.
+- `capitalize_comments.py`: Ensures that standalone inline comments start with a capital letter, promoting readability and a professional coding style.
 
 ### Defining Hooks in `.pre-commit-hooks.yaml` 📘
 
@@ -49,11 +49,11 @@ To use Ultralytics pre-commit hooks in your own project, add the following to yo
 
 ```yaml
 repos:
-- repo: https://github.com/ultralytics/pre-commit-hooks
-  rev: main # Pin to 'main' for the latest, or a specific git tag/commit SHA for stability
-  hooks:
-    - id: capitalize-comments # Example: Use the ID of the hook you want to include
-    # Add other hook IDs as needed
+  - repo: https://github.com/ultralytics/pre-commit-hooks
+    rev: main # Pin to 'main' for the latest, or a specific git tag/commit SHA for stability
+    hooks:
+      - id: capitalize-comments # Example: Use the ID of the hook you want to include
+      # Add other hook IDs as needed
 ```
 
 After updating your configuration, run this command in your project's root directory to install the hooks:
@@ -74,8 +74,8 @@ Ultralytics values community contributions! Your involvement helps us improve an
 
 Ultralytics offers two licensing options:
 
--   **AGPL-3.0 License:** An [OSI-approved](https://opensource.org/license/agpl-v3) open-source license ideal for students, researchers, and enthusiasts who value open collaboration. See the [LICENSE](https://github.com/ultralytics/ultralytics/blob/main/LICENSE) file for details.
--   **Enterprise License:** Designed for commercial use, this license allows seamless integration of Ultralytics software and AI models into commercial products and services, bypassing the open-source requirements of AGPL-3.0. For inquiries, visit [Ultralytics Licensing](https://www.ultralytics.com/license).
+- **AGPL-3.0 License:** An [OSI-approved](https://opensource.org/license/agpl-v3) open-source license ideal for students, researchers, and enthusiasts who value open collaboration. See the [LICENSE](https://github.com/ultralytics/ultralytics/blob/main/LICENSE) file for details.
+- **Enterprise License:** Designed for commercial use, this license allows seamless integration of Ultralytics software and AI models into commercial products and services, bypassing the open-source requirements of AGPL-3.0. For inquiries, visit [Ultralytics Licensing](https://www.ultralytics.com/license).
 
 ## 📮 Contact
 

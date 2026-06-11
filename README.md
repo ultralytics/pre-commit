@@ -13,12 +13,12 @@ Welcome to the Ultralytics pre-commit hooks repository! This collection features
 
 This repository is organized for clarity and ease of use:
 
-- **`hooks/` directory:** Contains individual [Python](https://www.python.org/) scripts, each representing a distinct pre-commit hook designed for specific checks or code formatting tasks.
+- **Hook scripts:** Individual [Python](https://www.python.org/) scripts live at the repository root, each representing a distinct pre-commit hook designed for specific checks or code formatting tasks.
 - **`.pre-commit-hooks.yaml`:** The root configuration file defining the available hooks, making them discoverable and easy to integrate into your projects.
 
-### Hook Scripts in `hooks` Directory 📂
+### Available Hook Scripts 📂
 
-Each script within the `hooks` directory is a standalone Python program performing a specific pre-commit task. For instance:
+Each hook script is a standalone Python program performing a specific pre-commit task. For instance:
 
 - `capitalize_comments.py`: Ensures that standalone inline comments start with a capital letter, promoting readability and a professional coding style.
 
@@ -29,7 +29,7 @@ The `.pre-commit-hooks.yaml` file lists all installable hooks. Here's an example
 ```yaml
 - id: hook-id # Unique identifier for the hook
   name: "A descriptive name for the hook" # User-friendly name
-  entry: hooks/your_hook_script.py # Path to the hook script
+  entry: your_hook_script.py # Path to the hook script
   language: python # Specifies the language the script is written in
   types: [python] # File types the hook should run on
 ```
@@ -38,7 +38,7 @@ The `.pre-commit-hooks.yaml` file lists all installable hooks. Here's an example
 
 Interested in contributing a new hook? Follow these steps:
 
-1.  **Create Your Hook Script:** Develop a Python script implementing your desired check or formatting logic. Place it in the `hooks/` directory. Ensure your script includes clear error messages and handles potential edge cases.
+1.  **Create Your Hook Script:** Develop a Python script implementing your desired check or formatting logic. Place it at the repository root, or use a subdirectory and reference that path from `.pre-commit-hooks.yaml`. Ensure your script includes clear error messages and handles potential edge cases.
 2.  **Declare the Hook:** Add a new entry for your hook in the `.pre-commit-hooks.yaml` file, following the structure shown above.
 3.  **Test Locally:** Thoroughly test your hook in a local project environment using `pre-commit run --all-files` to confirm it works as expected before submitting.
 4.  **Submit Your Contribution:** Commit your changes and create a Pull Request to the repository. Adhering to our [contribution guidelines](https://docs.ultralytics.com/help/contributing/) is appreciated.
@@ -49,7 +49,7 @@ To use Ultralytics pre-commit hooks in your own project, add the following to yo
 
 ```yaml
 repos:
-  - repo: https://github.com/ultralytics/pre-commit-hooks
+  - repo: https://github.com/ultralytics/pre-commit
     rev: main # Pin to 'main' for the latest, or a specific git tag/commit SHA for stability
     hooks:
       - id: capitalize-comments # Example: Use the ID of the hook you want to include
@@ -68,13 +68,13 @@ Now, the specified Ultralytics hooks will automatically run on your staged files
 
 Ultralytics values community contributions! Your involvement helps us improve and grow. Please review our [Contributing Guide](https://docs.ultralytics.com/help/contributing/) for detailed information on how to participate. We also encourage you to share your feedback through our [Survey](https://www.ultralytics.com/survey?utm_source=github&utm_medium=social&utm_campaign=Survey). A big thank you 🙏 to all our contributors! Check out some [tips on contributing to open-source projects](https://www.ultralytics.com/blog/tips-to-start-contributing-to-ultralytics-open-source-projects) on our blog.
 
-[![Ultralytics open-source contributors](https://raw.githubusercontent.com/ultralytics/assets/main/im/image-contributors.png)](https://github.com/ultralytics/ultralytics/graphs/contributors)
+[![Ultralytics open-source contributors](https://raw.githubusercontent.com/ultralytics/assets/main/im/image-contributors.png)](https://github.com/ultralytics/pre-commit/graphs/contributors)
 
 ## 📄 License
 
 Ultralytics offers two licensing options:
 
-- **AGPL-3.0 License:** An [OSI-approved](https://opensource.org/license/agpl-v3) open-source license ideal for students, researchers, and enthusiasts who value open collaboration. See the [LICENSE](https://github.com/ultralytics/ultralytics/blob/main/LICENSE) file for details.
+- **AGPL-3.0 License:** An [OSI-approved](https://opensource.org/license/agpl-v3) open-source license ideal for students, researchers, and enthusiasts who value open collaboration. See the [LICENSE](https://github.com/ultralytics/pre-commit/blob/main/LICENSE) file for details.
 - **Enterprise License:** Designed for commercial use, this license allows seamless integration of Ultralytics software and AI models into commercial products and services, bypassing the open-source requirements of AGPL-3.0. For inquiries, visit [Ultralytics Licensing](https://www.ultralytics.com/license).
 
 ## 📮 Contact

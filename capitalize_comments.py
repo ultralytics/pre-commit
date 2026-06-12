@@ -27,7 +27,7 @@ def process_file(file_path: Path):
     prev_was_comment = False
     processed_lines = []
     for line in lines:
-        if is_comment := line.strip().startswith("#"):
+        if line.strip().startswith("#"):
             processed_line = capitalize_comment_line(line, prev_was_comment)
             processed_lines.append(processed_line)
             prev_was_comment = True

@@ -16,7 +16,9 @@ def capitalize_comment_line(line: str, prev_was_comment: bool) -> str:
     if prev_was_comment:
         return line
 
-    return re.sub(r"^(\s*)# (\w)", lambda m: f"{m.group(1)}# {m.group(2).upper()}", line)
+    return re.sub(
+        r"^(\s*)# (\w)", lambda m: f"{m.group(1)}# {m.group(2).upper()}", line
+    )
 
 
 def process_file(file_path: Path):
@@ -27,7 +29,7 @@ def process_file(file_path: Path):
     prev_was_comment = False
     processed_lines = []
     for line in lines:
-        if is_comment := line.strip().startswith("#"):
+        if line.strip().startswith("#"):
             processed_line = capitalize_comment_line(line, prev_was_comment)
             processed_lines.append(processed_line)
             prev_was_comment = True

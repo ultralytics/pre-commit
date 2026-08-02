@@ -1,6 +1,7 @@
 # Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
 
 import re
+import sys
 from pathlib import Path
 
 EXCLUDE_TERMS = ["import", "return", "def ", "class ", ".", "=", ":", "(", ",", "["]
@@ -39,8 +40,11 @@ def process_file(file_path: Path):
         f.writelines(processed_lines)
 
 
-if __name__ == "__main__":
-    import sys
-
+def main():
+    """Capitalizes standalone inline comments in each file passed on the command line."""
     for file in sys.argv[1:]:
         process_file(Path(file))
+
+
+if __name__ == "__main__":
+    main()

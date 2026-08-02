@@ -15,6 +15,7 @@ This repository is organized for clarity and ease of use:
 
 - **Hook scripts:** Individual [Python](https://www.python.org/) scripts live at the repository root, each representing a distinct pre-commit hook designed for specific checks or code formatting tasks.
 - **`.pre-commit-hooks.yaml`:** The root configuration file defining the available hooks, making them discoverable and easy to integrate into your projects.
+- **`pyproject.toml`:** Packages the repository and exposes each hook script as a console script under `[project.scripts]`, which is what `.pre-commit-hooks.yaml` invokes.
 
 ### Available Hook Scripts 📂
 
@@ -29,7 +30,7 @@ The `.pre-commit-hooks.yaml` file lists all installable hooks. Here's an example
 ```yaml
 - id: hook-id # Unique identifier for the hook
   name: "A descriptive name for the hook" # User-friendly name
-  entry: your_hook_script.py # Path to the hook script
+  entry: your-hook-command # Console script declared in [project.scripts]
   language: python # Specifies the language the script is written in
   types: [python] # File types the hook should run on
 ```
@@ -38,8 +39,8 @@ The `.pre-commit-hooks.yaml` file lists all installable hooks. Here's an example
 
 Interested in contributing a new hook? Follow these steps:
 
-1.  **Create Your Hook Script:** Develop a Python script implementing your desired check or formatting logic. Place it at the repository root, or use a subdirectory and reference that path from `.pre-commit-hooks.yaml`. Ensure your script includes clear error messages and handles potential edge cases.
-2.  **Declare the Hook:** Add a new entry for your hook in the `.pre-commit-hooks.yaml` file, following the structure shown above.
+1.  **Create Your Hook Script:** Develop a Python script implementing your desired check or formatting logic, exposing a `main()` that reads file paths from `sys.argv[1:]`. Place it at the repository root. Ensure your script includes clear error messages and handles potential edge cases.
+2.  **Declare the Hook:** Register the script as a console script in `pyproject.toml` under `[project.scripts]`, then add a new entry for your hook in the `.pre-commit-hooks.yaml` file whose `entry` is that console script name, following the structure shown above.
 3.  **Test Locally:** Thoroughly test your hook in a local project environment using `pre-commit run --all-files` to confirm it works as expected before submitting.
 4.  **Submit Your Contribution:** Commit your changes and create a Pull Request to the repository. Adhering to our [contribution guidelines](https://docs.ultralytics.com/help/contributing/) is appreciated.
 

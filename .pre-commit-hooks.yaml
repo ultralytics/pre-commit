@@ -5,6 +5,6 @@
 - id: capitalize-comments
   name: Capitalize standalone inline comments
   description: This hook capitalizes the first letter in standalone inline comments.
-  entry: capitalize_comments.py
+  entry: capitalize-comments
   language: python
   types: [python]

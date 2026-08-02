@@ -21,6 +21,9 @@ classifiers = [
     "Topic :: Utilities",
 ]
 
+[project.scripts]
+capitalize-comments = "capitalize_comments:main"
+
 [tool.black]
 line-length = 120
 

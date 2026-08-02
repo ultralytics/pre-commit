@@ -24,8 +24,5 @@ classifiers = [
 [project.scripts]
 capitalize-comments = "capitalize_comments:main"
 
-[tool.black]
+[tool.ruff]
 line-length = 120
-
-[tool.isort]
-profile = "black"

@@ -1,13 +1,13 @@
-<a href="https://www.ultralytics.com/"><img src="https://raw.githubusercontent.com/ultralytics/assets/main/logo/Ultralytics_Logotype_Original.svg" width="320" alt="Ultralytics logo"></a>
+<a href="https://www.ultralytics.com"><img src="https://raw.githubusercontent.com/ultralytics/assets/main/logo/Ultralytics_Logotype_Original.svg" width="320" alt="Ultralytics logo"></a>
 
 # 🛠️ Ultralytics Pre-commit Hooks
 
-Welcome to the Ultralytics pre-commit hooks repository! This collection features hooks developed by [Ultralytics](https://www.ultralytics.com/) to enforce code quality and maintain consistent standards across our software projects. Integrating these hooks into your development workflow automates code validation, ensuring a high level of code hygiene and reducing manual review efforts. Learn more about the [pre-commit framework](https://pre-commit.com/) itself on their official website.
+Welcome to the Ultralytics pre-commit hooks repository! This collection features hooks developed by [Ultralytics](https://www.ultralytics.com) to enforce code quality and maintain consistent standards across our software projects. Integrating these hooks into your development workflow automates code validation, ensuring a high level of code hygiene and reducing manual review efforts. Learn more about the [pre-commit framework](https://pre-commit.com/) itself on their official website.
 
 [![Ultralytics Actions](https://github.com/ultralytics/pre-commit/actions/workflows/format.yml/badge.svg)](https://github.com/ultralytics/pre-commit/actions/workflows/format.yml)
 [![Ultralytics Discord](https://img.shields.io/discord/1089800235347353640?logo=discord&logoColor=white&label=Discord&color=blue)](https://discord.com/invite/ultralytics)
-[![Ultralytics Forums](https://img.shields.io/discourse/users?server=https%3A%2F%2Fcommunity.ultralytics.com&logo=discourse&label=Forums&color=blue)](https://community.ultralytics.com/)
-[![Ultralytics Reddit](https://img.shields.io/reddit/subreddit-subscribers/ultralytics?style=flat&logo=reddit&logoColor=white&label=Reddit&color=blue)](https://reddit.com/r/ultralytics)
+[![Ultralytics Forums](https://img.shields.io/discourse/users?server=https%3A%2F%2Fcommunity.ultralytics.com&logo=discourse&label=Forums&color=blue)](https://community.ultralytics.com)
+[![Ultralytics Reddit](https://img.shields.io/reddit/subreddit-subscribers/ultralytics?style=flat&logo=reddit&logoColor=white&label=Reddit&color=blue)](https://www.reddit.com/r/ultralytics/)
 
 ## 🗂️ Repository Structure
 
@@ -42,7 +42,7 @@ Interested in contributing a new hook? Follow these steps:
 1.  **Create Your Hook Script:** Develop a Python script implementing your desired check or formatting logic, exposing a `main()` that reads file paths from `sys.argv[1:]`. Place it at the repository root. Ensure your script includes clear error messages and handles potential edge cases.
 2.  **Declare the Hook:** Register the script as a console script in `pyproject.toml` under `[project.scripts]`, then add a new entry for your hook in the `.pre-commit-hooks.yaml` file whose `entry` is that console script name, following the structure shown above.
 3.  **Test Locally:** Thoroughly test your hook in a local project environment using `pre-commit run --all-files` to confirm it works as expected before submitting.
-4.  **Submit Your Contribution:** Commit your changes and create a Pull Request to the repository. Adhering to our [contribution guidelines](https://docs.ultralytics.com/help/contributing/) is appreciated.
+4.  **Submit Your Contribution:** Commit your changes and create a Pull Request to the repository. Adhering to our [contribution guidelines](https://docs.ultralytics.com/help/contributing) is appreciated.
 
 ## 🔧 Installing Hooks in Your Project
 
@@ -67,7 +67,7 @@ Now, the specified Ultralytics hooks will automatically run on your staged files
 
 ## 💡 Contribute
 
-Ultralytics values community contributions! Your involvement helps us improve and grow. Please review our [Contributing Guide](https://docs.ultralytics.com/help/contributing/) for detailed information on how to participate. We also encourage you to share your feedback through our [Survey](https://www.ultralytics.com/survey?utm_source=github&utm_medium=social&utm_campaign=Survey). A big thank you 🙏 to all our contributors! Check out some [tips on contributing to open-source projects](https://www.ultralytics.com/blog/tips-to-start-contributing-to-ultralytics-open-source-projects) on our blog.
+Ultralytics values community contributions! Your involvement helps us improve and grow. Please review our [Contributing Guide](https://docs.ultralytics.com/help/contributing) for detailed information on how to participate. We also encourage you to share your feedback through our [Survey](https://www.ultralytics.com/survey?utm_source=github&utm_medium=social&utm_campaign=Survey). A big thank you 🙏 to all our contributors! Check out some [tips on contributing to open-source projects](https://www.ultralytics.com/blog/tips-to-start-contributing-to-ultralytics-open-source-projects) on our blog.
 
 [![Ultralytics open-source contributors](https://raw.githubusercontent.com/ultralytics/assets/main/im/image-contributors.png)](https://github.com/ultralytics/pre-commit/graphs/contributors)
 
@@ -75,7 +75,7 @@ Ultralytics values community contributions! Your involvement helps us improve an
 
 Ultralytics offers two licensing options:
 
-- **AGPL-3.0 License:** An [OSI-approved](https://opensource.org/license/agpl-v3) open-source license ideal for students, researchers, and enthusiasts who value open collaboration. See the [LICENSE](https://github.com/ultralytics/pre-commit/blob/main/LICENSE) file for details.
+- **AGPL-3.0 License:** An [OSI-approved](https://opensource.org/license/agpl-3.0) open-source license ideal for students, researchers, and enthusiasts who value open collaboration. See the [LICENSE](https://github.com/ultralytics/pre-commit/blob/main/LICENSE) file for details.
 - **Enterprise License:** Designed for commercial use, this license allows seamless integration of Ultralytics software and AI models into commercial products and services, bypassing the open-source requirements of AGPL-3.0. For inquiries, visit [Ultralytics Licensing](https://www.ultralytics.com/license).
 
 ## 📮 Contact
